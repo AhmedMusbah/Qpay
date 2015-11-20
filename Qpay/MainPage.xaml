@@ -1,0 +1,257 @@
+﻿<Page
+    x:Class="Qpay.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Qpay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="LoginStoryBoard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="brdrQpay">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="txtPassword">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnLogin">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="txtUsername">
+                <EasingDoubleKeyFrame KeyTime="0" Value="378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="CheckBoxRemember">
+                <EasingDoubleKeyFrame KeyTime="0" Value="378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnCreateAccount">
+                <EasingDoubleKeyFrame KeyTime="0" Value="378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="CreateAccountStoryBoard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="LblCreateAccount">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="txtPasswordCreate">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="txtMailCreate">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnCreateAccountCreate">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="txtUserNameCreate">
+                <EasingDoubleKeyFrame KeyTime="0" Value="378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="txtConfirmPasswordCreate">
+                <EasingDoubleKeyFrame KeyTime="0" Value="378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="txtPhoneNumberCreate">
+                <EasingDoubleKeyFrame KeyTime="0" Value="378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnCancelCreate">
+                <EasingDoubleKeyFrame KeyTime="0" Value="378.392"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="AfterAuthStoryBoard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="btnPayForServices">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.031"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.987"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnPayForServices">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-0.108"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.421"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="txtblockYouAreLoggedAs">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-174.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-6.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="25.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="txtblockYouAreLoggedAs">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="txtblockLoggedUserName">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="txtblockLoggedUserName">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-179.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="25.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="btnLoginWithDifferentAccount">
+                <EasingDoubleKeyFrame KeyTime="0" Value="236.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-13.417"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnLoginWithDifferentAccount">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="btnAbout">
+                <EasingDoubleKeyFrame KeyTime="0" Value="246.083"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1.083"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnAbout">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="btnHowItWorks">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="btnHowItWorks">
+                <EasingDoubleKeyFrame KeyTime="0" Value="253.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="20.083"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="txtblockYouAreLoggedAs">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.026"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    <Grid x:Name="Main" HorizontalAlignment="Left" Height="640" VerticalAlignment="Top" Width="400">
+        <ContentControl x:Name="HowItWorksControlContent" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsHidden="True">
+            <Grid x:Name="HowItWorksGrid" Height="638" Width="400">
+                <MediaElement x:Name="HowItWorksMediaElement" HorizontalAlignment="Left" Height="618" VerticalAlignment="Top" Width="380" Margin="10,10,0,0" MediaEnded="HowItWorksMediaElement_MediaEnded" Tapped="HowItWorksMediaElement_Tapped"/>
+            </Grid>
+        </ContentControl>
+        <ContentControl x:Name="AboutControlContent" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsHidden="True">
+            <Grid x:Name="AboutGrid" Height="638" Width="400">
+                <MediaElement x:Name="AboutMediaElement" HorizontalAlignment="Left" Height="618" VerticalAlignment="Top" Width="380" Margin="10,10,0,0" MediaEnded="AboutMediaElement_MediaEnded" Tapped="AboutMediaElement_Tapped"/>
+            </Grid>
+        </ContentControl>
+        <ContentControl x:Name="LoginContentControl" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" d:IsHidden="True">
+            <Grid x:Name="LoginGrid" Height="620" Width="380">
+                <Border x:Name="brdrQpay" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="203" VerticalAlignment="Top" Width="360" Margin="10,10,10,0" RenderTransformOrigin="0.5,0.5">
+                    <Border.RenderTransform>
+                        <CompositeTransform/>
+                    </Border.RenderTransform>
+                    <Border.Background>
+                        <ImageBrush ImageSource="Assets/512x512.png" Stretch="Uniform"/>
+                    </Border.Background>
+                </Border>
+                <TextBox x:Name="txtUsername" HorizontalAlignment="Center" Margin="10,253,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" PlaceholderText="User Name" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <PasswordBox x:Name="txtPassword" HorizontalAlignment="Center" Margin="10,314,10,0" VerticalAlignment="Top" Width="360" PlaceholderText="Password" RenderTransformOrigin="0.5,0.5">
+                    <PasswordBox.RenderTransform>
+                        <CompositeTransform/>
+                    </PasswordBox.RenderTransform>
+                </PasswordBox>
+                <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Center" Margin="10,505,10,58" VerticalAlignment="Center" Width="360" Click="btnLogin_Click" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <CompositeTransform/>
+                    </Button.RenderTransform>
+                </Button>
+                <CheckBox x:Name="CheckBoxRemember" Content="Remember Me" HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" Width="360" RenderTransformOrigin="0.5,0.5">
+                    <CheckBox.RenderTransform>
+                        <CompositeTransform/>
+                    </CheckBox.RenderTransform>
+                </CheckBox>
+                <Button x:Name="btnCreateAccount" Content="Create Account" HorizontalAlignment="Left" Margin="10,562,0,0" VerticalAlignment="Top" Width="360" Click="btnCreateAccount_Click" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <CompositeTransform/>
+                    </Button.RenderTransform>
+                </Button>
+
+            </Grid>
+        </ContentControl>
+        <ContentControl x:Name="CreateAccountContentControl" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="630" Width="380" d:IsHidden="True">
+            <Grid x:Name="CreateAccountGrid" HorizontalAlignment="Left" Height="620" VerticalAlignment="Top" Width="380">
+                <TextBlock x:Name="LblCreateAccount" HorizontalAlignment="Right" Margin="0,10,10,0" TextWrapping="Wrap" Text="Create Account" VerticalAlignment="Top" Height="63" Width="360" TextAlignment="Center" FontSize="35" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBox x:Name="txtUserNameCreate" HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" PlaceholderText="User Name" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <PasswordBox x:Name="txtPasswordCreate" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="360" PlaceholderText="Password" RenderTransformOrigin="0.5,0.5">
+                    <PasswordBox.RenderTransform>
+                        <CompositeTransform/>
+                    </PasswordBox.RenderTransform>
+                </PasswordBox>
+                <PasswordBox x:Name="txtConfirmPasswordCreate" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top" Width="360" PlaceholderText="Confirm Password" RenderTransformOrigin="0.5,0.5">
+                    <PasswordBox.RenderTransform>
+                        <CompositeTransform/>
+                    </PasswordBox.RenderTransform>
+                </PasswordBox>
+                <TextBox x:Name="txtMailCreate" HorizontalAlignment="Left" Margin="10,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" PlaceholderText="Mail" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <TextBox x:Name="txtPhoneNumberCreate" HorizontalAlignment="Left" Margin="10,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" PlaceholderText="Phone Number" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <Button x:Name="btnCancelCreate" Content="Cancel" HorizontalAlignment="Left" Margin="10,562,0,0" VerticalAlignment="Top" Width="360" Click="btnCancelCreate_Click" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <CompositeTransform/>
+                    </Button.RenderTransform>
+                </Button>
+                <Button x:Name="btnCreateAccountCreate" Content="Create Account" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,505,0,0" Width="360" Click="btnCreateAccountCreate_Click" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <CompositeTransform/>
+                    </Button.RenderTransform>
+                </Button>
+            </Grid>
+        </ContentControl>
+        <ContentControl x:Name="AfterAuthContentControl" HorizontalAlignment="Left" VerticalAlignment="Top" Height="640" Width="400">
+            <Grid x:Name="AfterAuthGrid" Height="640" Width="400">
+                <Button x:Name="btnHowItWorks" Content="How It Works" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,435,0,0" Width="380" RenderTransformOrigin="0.5,0.5" Click="btnHowItWorks_Click">
+                    <Button.RenderTransform>
+                        <CompositeTransform/>
+                    </Button.RenderTransform>
+                </Button>
+                <Button x:Name="btnPayForServices" Content="Pay For Services" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,264,0,0" Width="380" RenderTransformOrigin="0.5,0.5" Click="btnPayForServices_Click">
+                    <Button.RenderTransform>
+                        <CompositeTransform/>
+                    </Button.RenderTransform>
+                </Button>
+                <Button x:Name="btnAbout" Content="About" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,509,0,0" Width="380" RenderTransformOrigin="0.5,0.5" Click="btnAbout_Click">
+                    <Button.RenderTransform>
+                        <CompositeTransform/>
+                    </Button.RenderTransform>
+                </Button>
+                <Button x:Name="btnLoginWithDifferentAccount" Content="Login With Different Account" HorizontalAlignment="Left" Margin="10,582,0,0" VerticalAlignment="Top" Width="380" RenderTransformOrigin="0.5,0.5" Click="btnLoginWithDifferentAccount_Click">
+                    <Button.RenderTransform>
+                        <CompositeTransform/>
+                    </Button.RenderTransform>
+                </Button>
+                <TextBlock x:Name="txtblockYouAreLoggedAs" HorizontalAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="You Are Logged As" VerticalAlignment="Top" Height="58" Width="380" FontWeight="Bold" FontSize="30.667" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock x:Name="txtblockLoggedUserName" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,73,10,0" Height="65" Width="380" FontWeight="Bold" FontSize="26.667" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock x:Name="txtStatus" HorizontalAlignment="Left" Margin="10,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="380" FontSize="18" TextAlignment="Center"/>
+            </Grid>
+        </ContentControl>
+    </Grid>
+</Page>
